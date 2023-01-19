@@ -10,4 +10,4 @@ RUN apk add --no-cache stunnel
 WORKDIR /etc/stunnel/
 VOLUME /etc/stunnel/
 
-CMD ["stunnel"]
+CMD ["stunnel", "./data/server.conf"]
