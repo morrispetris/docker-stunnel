@@ -12,8 +12,9 @@ VOLUME /etc/stunnel/
 
 #WORKDIR /etc/stunnel/
 
-ADD ./data/stunnel.conf /etc/stunnel/stunnel.conf
+ADD ./data/stunnel.crt /etc/stunnel/stunnel.crt
 ADD ./data/stunnel.key /etc/stunnel/stunnel.key
+ADD ./data/server.conf /etc/stunnel/server.conf
 
 EXPOSE 443
-CMD ["stunnel", "./data/server.conf"]
+CMD ["stunnel", "/etc/stunnel/server.conf"]
